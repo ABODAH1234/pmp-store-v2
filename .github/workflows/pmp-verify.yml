@@ -1,0 +1,38 @@
+name: Verify PMP theme
+on:
+  push:
+    branches: [pmp-red-design-review]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '10'
+      - run: pnpm install --no-frozen-lockfile
+      - run: pnpm production
+      - name: Verify output and theme paths
+        run: |
+          node <<'NODE'
+          const fs=require('node:fs'), assert=require('node:assert/strict');
+          const meta=JSON.parse(fs.readFileSync('twilight.json','utf8'));
+          assert.equal(meta.repository,'https://github.com/ABODAH1234/pmp-store-v2');
+          for(const c of meta.components) assert(fs.existsSync('src/views/components/'+c.path.replaceAll('.','/')+'.twig'),c.path);
+          for(const p of ['public/pmp.css','public/pmp.js','public/app.css','public/app.js','public/images/pmp-hero-banner.png']) assert(fs.statSync(p).size>0,p);
+          console.log('Production assets and component paths verified. Salla import remains a separate check.');
+          NODE
+      - name: Package theme
+        run: zip -qr PMP-Red-Theme.zip src public twilight.json package.json pnpm-workspace.yaml pnpm-lock.yaml webpack.config.js postcss.config.js tailwind.config.js .npmrc
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PMP-Red-Theme
+          path: PMP-Red-Theme.zip
