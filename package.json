@@ -1,12 +1,8 @@
 {
   "name": "pmp-performance-theme",
   "version": "1.0.0",
-  "description": "Independent PMP Performance automotive storefront theme for Salla Twilight",
+  "description": "Custom Salla Twilight theme for PMP Performance",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ABODAH1234/pmp-store-v2.git"
-  },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -28,8 +24,9 @@
     "@babel/core": "^8.0.1",
     "@babel/plugin-transform-runtime": "^8.0.1",
     "@babel/preset-env": "^8.0.2",
-    "@salla.sa/twilight": "^2.14.551",
-    "@salla.sa/twilight-components": "^2.14.551",
+    "@salla.sa/twilight": "2.14.516",
+    "@salla.sa/twilight-components": "2.14.516",
+    "@salla.sa/twilight-tailwind-theme": "2.14.516",
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
@@ -54,11 +51,16 @@
   "engines": {
     "node": "^22.18.0 || >=24.11.0"
   },
-  "homepage": "https://pmpperformance.online",
-  "keywords": [
-    "pmp-performance",
-    "salla",
-    "twilight",
-    "automotive-performance"
-  ]
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher",
+      "bufferutil",
+      "es5-ext",
+      "utf-8-validate"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ABODAH1234/pmp-store-v2.git"
+  }
 }
