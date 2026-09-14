@@ -129,6 +129,7 @@
 {% if store.scope %}
     <salla-scopes data-testid="store-scopes" selection="{{ store.scope.display_as == 'popup' ? 'mandatory' : 'optional' }}"></salla-scopes>
 {% endif %}
+<script defer src="{{ 'pmp.js'|asset }}"></script>
 {% block scripts %}{% endblock %}
 </body>
 </html>

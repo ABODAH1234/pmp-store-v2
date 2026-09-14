@@ -1,46 +1,25 @@
-{#
-| Variable         | Type       | Description                                                         |
-|------------------|------------|---------------------------------------------------------------------|
-| page             | object     |                                                                     |
-| page.title       | string     | *could be html                                                      |
-| page.slug        | string     | ex: "cat.show"                                                      |
-#}
 {% extends "layouts.master" %}
 {% block content %}
-    <section class="pmp-hero container">
-        <a href="#pmp-products" aria-label="تصفح منتجات PMP">
-            <img src="{{ 'images/pmp-hero-banner.png'|asset }}" alt="PMP Performance - شركات التعديل العالمية" width="2172" height="724" fetchpriority="high">
-        </a>
-    </section>
-
-    <section class="pmp-departments container">
-        <div class="pmp-section-heading"><h2>تسوق حسب القطعة</h2><span>POWER MATCH PERFORMANCE</span></div>
-        <div class="pmp-department-grid">
-            <a class="pmp-department" href="#pmp-products"><span class="pmp-department__number">01</span><h3>كلتشات PMP</h3><p>1FZ · TB48 · RB25 · L24 · L28 · ددسن</p><i class="sicon-arrow-left" aria-hidden="true"></i></a>
-            <a class="pmp-department" href="#pmp-products"><span class="pmp-department__number">02</span><h3>قطع محركات GM LS</h3><p>أصياخ · سبرنق دبل · تكايات · تايمنق</p><i class="sicon-arrow-left" aria-hidden="true"></i></a>
-            <a class="pmp-department" href="#pmp-products"><span class="pmp-department__number">03</span><h3>فلاتر وبواجي</h3><p>K&amp;N · NGK · قطع دعم المشاريع</p><i class="sicon-arrow-left" aria-hidden="true"></i></a>
-        </div>
-    </section>
-
-    <section class="pmp-special-orders container">
-        <div class="pmp-section-heading"><h2>ما لقيت قطعتك؟</h2><span>REQUEST A PART</span></div>
-        <div class="pmp-request-grid">
-            <article class="pmp-request-card"><span class="pmp-request-card__label">SPECIAL ORDER</span><h3>طلب قطع تعديل</h3><p>أرسل رقم القطعة أو مواصفات السيارة، ونرجع لك بالتوفر والسعر.</p><a class="pmp-request-card__cta" href="mailto:{{ store.contacts.email }}?subject=طلب%20قطع%20تعديل">اطلب قطع تعديل <i class="sicon-arrow-left" aria-hidden="true"></i></a></article>
-            <article class="pmp-request-card"><span class="pmp-request-card__label">OEM REQUEST</span><h3>طلب قطع وكالة</h3><p>أرسل رقم الشاص أو رقم القطعة المطلوب للتأكد من المطابقة والتوفر.</p><a class="pmp-request-card__cta" href="mailto:{{ store.contacts.email }}?subject=طلب%20قطع%20وكالة">اطلب قطع وكالة <i class="sicon-arrow-left" aria-hidden="true"></i></a></article>
-        </div>
-    </section>
-
-    <section id="pmp-policies" class="pmp-policies container">
-        <div class="pmp-section-heading"><h2>سياسات PMP</h2><span>STORE POLICIES</span></div>
-        <div class="pmp-policy-grid">
-            <article class="pmp-policy-card"><h3>الشحن والتسليم</h3><p>يتم تأكيد توفر القطعة وموعد الشحن بعد مراجعة الطلب. الشحن من الجبيل إلى السعودية والخليج، وتصل معلومات التتبع عند تجهيز الشحنة.</p></article>
-            <article class="pmp-policy-card"><h3>الاستبدال والاسترجاع</h3><p>لأن قطع الأداء تختلف حسب التطبيق، راجع رقم القطعة ومواصفات سيارتك قبل الطلب. تواصل معنا قبل الإرجاع أو الاستبدال ليتم التحقق من حالة القطعة والطلب.</p></article>
-        </div>
-    </section>
-
-    {% component home %}
-    <section id="pmp-products" class="container pmp-catalog"><div class="pmp-section-heading"><h2>{{ trans('pmp.all_products') }}</h2></div><salla-products-list source="latest" limit="32"></salla-products-list></section>
+<section class="pmp-hero"><a href="#pmp-products" aria-label="تصفح منتجات PMP"><img src="{{ 'images/pmp-hero-banner.png'|asset }}" alt="PMP Performance — شركات التعديل العالمية" width="2172" height="724" fetchpriority="high"></a></section>
+<div class="pmp-home-surface"><div class="pmp-wrap">
+<section class="pmp-departments" aria-label="تسوق حسب القطعة"><div class="pmp-department-grid">
+<a class="pmp-department" href="#pmp-products" data-pmp-group="clutches" data-product-ids="[1205725543,2086694171,580603418,2121906965,2017607468,778375203]" data-title="كلتشات PMP"><div class="pmp-department-image"><img src="https://cdn.salla.sa/KjwzEg/956f3424-f4b0-4226-87a7-ee6f762e7e91-1000x1000-zZRYKKpbNXEWi7IqrfZSVjeWomygsuptqLINBInM.jpg" alt="كلتشات PMP" width="380" height="220" loading="lazy"></div><div class="pmp-department-copy"><h2>كلتشات PMP</h2><p>1FZ · TB48 · RB25 · L24 · L28 · ددسن</p><span class="pmp-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></div></a>
+<a class="pmp-department" href="#pmp-products" data-pmp-group="ls" data-product-ids="[612614332,257373642,1780394701,1315663043,580988609,1839547898,1106446328,1701579037,1522889189,1036437399]" data-title="قطع محركات GM LS"><div class="pmp-department-image"><img src="https://cdn.salla.sa/KjwzEg/a675d536-55ce-4ce2-95dc-40cf2af29e3d-500x500-Hfrx8wnnUI2gnpB8zYJCWtAraD1poV4H7mF36GxT.png" alt="قطع محركات GM LS" width="380" height="220" loading="lazy"></div><div class="pmp-department-copy"><h2>قطع محركات GM LS</h2><p>أصياخ · سبرنق · تكايات · تايمنق</p><span class="pmp-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></div></a>
+<a class="pmp-department" href="#pmp-products" data-pmp-group="intake" data-product-ids="[531505582,799965355,907944872,657800096,1608105892,1716081497,342635608,1932241235,733883735,1857447317,926154687,1653695619,1101299296]" data-title="فلاتر وبواجي"><div class="pmp-department-image"><img src="https://cdn.salla.sa/KjwzEg/2ad3cc69-789b-4fbc-a039-b6505b4279df-462.42774566474x500-47z7V63si5dW7Sda4momlfeIvKOOlEaqzSiORCNp.jpg" alt="فلاتر وبواجي" width="380" height="220" loading="lazy"></div><div class="pmp-department-copy"><h2>فلاتر وبواجي</h2><p>K&amp;N · NGK · aFe · AEM · VCM</p><span class="pmp-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></div></a>
+</div></section>
+<section id="pmp-requests" class="pmp-request-grid" aria-label="طلبات القطع الخاصة">
+<a href="mailto:{{ store.contacts.email }}?subject=%D8%B7%D9%84%D8%A8%20%D9%82%D8%B7%D8%B9%20%D8%AA%D8%B9%D8%AF%D9%8A%D9%84" class="pmp-request" data-pmp-request="طلب قطع تعديل"><span class="pmp-request-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6 4-4a6 6 0 0 1-7 8L4 17a2 2 0 1 0 3 3l7-7a6 6 0 0 1 8-7l-4 4-4-4Z"/></svg></span><div><h2>طلب قطع تعديل</h2><p>حدد قطعتك ومواصفات سيارتك</p></div><span class="pmp-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></a>
+<a href="mailto:{{ store.contacts.email }}?subject=%D8%B7%D9%84%D8%A8%20%D9%82%D8%B7%D8%B9%20%D9%88%D9%83%D8%A7%D9%84%D8%A9" class="pmp-request" data-pmp-request="طلب قطع وكالة"><span class="pmp-request-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 7 9-5 9 5v10l-9 5-9-5V7Zm0 0 9 5 9-5M12 12v10M7 4l10 6v4"/></svg></span><div><h2>طلب قطع وكالة</h2><p>أرسل رقم القطعة أو رقم الشاص</p></div><span class="pmp-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></a>
+</section>
+<section id="pmp-products" class="pmp-catalog" aria-labelledby="pmp-product-heading">
+<div class="pmp-section-heading"><h2 id="pmp-product-heading">منتجات PMP</h2><a href="{{ link('products') }}" data-pmp-all>عرض جميع المنتجات <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></a></div>
+<div id="pmp-product-list"><salla-products-list source="selected" source-value="[778375203,2017607468,2121906965,580603418]" limit="4"></salla-products-list></div>
+<p id="pmp-catalog-status" role="status" class="sr-only"></p></section>
+<section class="pmp-services" aria-label="خدمة العملاء">
+<a href="#pmp-policy-pages"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 4h13v13H1V4Zm13 5h5l4 5v3h-9"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/></svg><span>سياسة الشحن<small>معلومات الشحن والتوصيل</small></span></a>
+<a href="#pmp-policy-pages"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h10a6 6 0 1 1 0 12M8 4 3 9l5 5"/></svg><span>الاستبدال والاسترجاع<small>اطّلع على سياسات المتجر</small></span></a>
+<a href="mailto:{{ store.contacts.email }}" data-pmp-request="استفسار عن مطابقة قطعة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6l9-4Z"/><path d="m8 12 3 3 5-6"/></svg><span>اختيار القطعة المناسبة<small>راسلنا بمواصفات سيارتك</small></span></a>
+<a href="#pmp-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11a9 9 0 0 1-9 9H4l-3 2V11a10 10 0 0 1 20 0Z"/><path d="M7 10h10M7 14h6"/></svg><span>تواصل معنا<small>نسعد بخدمتك</small></span></a>
+</section></div></div>
 {% endblock %}
-{% block scripts %}
-    <script defer src="{{ 'home.js' | asset }}"></script>
-{% endblock %}
+{% block scripts %}<script defer src="{{ 'home.js'|asset }}"></script>{% endblock %}
