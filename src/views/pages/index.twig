@@ -7,14 +7,25 @@
 <a class="pmp-department" href="#pmp-products" data-pmp-group="ls" data-product-ids="[612614332,257373642,1780394701,1315663043,580988609,1839547898,1106446328,1701579037,1522889189,1036437399]" data-title="قطع محركات GM LS"><div class="pmp-department-image"><img src="https://cdn.salla.sa/KjwzEg/a675d536-55ce-4ce2-95dc-40cf2af29e3d-500x500-Hfrx8wnnUI2gnpB8zYJCWtAraD1poV4H7mF36GxT.png" alt="قطع محركات GM LS" width="380" height="220" loading="lazy"></div><div class="pmp-department-copy"><h2>قطع محركات GM LS</h2><p>أصياخ · سبرنق · تكايات · تايمنق</p><span class="pmp-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></div></a>
 <a class="pmp-department" href="#pmp-products" data-pmp-group="intake" data-product-ids="[531505582,799965355,907944872,657800096,1608105892,1716081497,342635608,1932241235,733883735,1857447317,926154687,1653695619,1101299296]" data-title="فلاتر وبواجي"><div class="pmp-department-image"><img src="https://cdn.salla.sa/KjwzEg/2ad3cc69-789b-4fbc-a039-b6505b4279df-462.42774566474x500-47z7V63si5dW7Sda4momlfeIvKOOlEaqzSiORCNp.jpg" alt="فلاتر وبواجي" width="380" height="220" loading="lazy"></div><div class="pmp-department-copy"><h2>فلاتر وبواجي</h2><p>K&amp;N · NGK · aFe · AEM · VCM</p><span class="pmp-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></div></a>
 </div></section>
+<section class="pmp-product-strips" aria-label="تسوق حسب المحرك">
+  <div class="pmp-product-strip" id="pmp-products">
+    <div class="pmp-section-heading"><h2>منتجات PMP</h2><a href="{{ link('products') }}">عرض جميع المنتجات</a></div>
+    <salla-products-list source="selected" source-value="[1205725543,2086694171,580603418,2121906965,2017607468,778375203]" limit="4"></salla-products-list>
+  </div>
+  <div class="pmp-product-strip" id="pmp-gm-ls">
+    <div class="pmp-section-heading"><h2>قطع تعديل GM LS</h2><a href="{{ link('products') }}">عرض جميع المنتجات</a></div>
+    <salla-products-list source="selected" source-value="[612614332,257373642,1780394701,1315663043,580988609,1839547898,1106446328,1701579037,1522889189,1036437399]" limit="4"></salla-products-list>
+  </div>
+  <div class="pmp-product-strip" id="pmp-hemi-mopar">
+    <div class="pmp-section-heading"><h2>قطع تعديل HEMI / MOPAR</h2><a href="{{ link('products') }}">عرض جميع المنتجات</a></div>
+    <salla-products-list source="selected" source-value="[531505582,342635608,1932241235,733883735,815031607]" limit="4"></salla-products-list>
+  </div>
+</section>
+
 <section id="pmp-requests" class="pmp-request-grid" aria-label="طلبات القطع الخاصة">
 <a href="mailto:{{ store.contacts.email }}?subject=%D8%B7%D9%84%D8%A8%20%D9%82%D8%B7%D8%B9%20%D8%AA%D8%B9%D8%AF%D9%8A%D9%84" class="pmp-request" data-pmp-request="طلب قطع تعديل"><span class="pmp-request-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6 4-4a6 6 0 0 1-7 8L4 17a2 2 0 1 0 3 3l7-7a6 6 0 0 1 8-7l-4 4-4-4Z"/></svg></span><div><h2>طلب قطع تعديل</h2><p>حدد قطعتك ومواصفات سيارتك</p></div><span class="pmp-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></a>
 <a href="mailto:{{ store.contacts.email }}?subject=%D8%B7%D9%84%D8%A8%20%D9%82%D8%B7%D8%B9%20%D9%88%D9%83%D8%A7%D9%84%D8%A9" class="pmp-request" data-pmp-request="طلب قطع وكالة"><span class="pmp-request-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 7 9-5 9 5v10l-9 5-9-5V7Zm0 0 9 5 9-5M12 12v10M7 4l10 6v4"/></svg></span><div><h2>طلب قطع وكالة</h2><p>أرسل رقم القطعة أو رقم الشاص</p></div><span class="pmp-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></a>
 </section>
-<section id="pmp-products" class="pmp-catalog" aria-labelledby="pmp-product-heading">
-<div class="pmp-section-heading"><h2 id="pmp-product-heading">منتجات PMP</h2><a href="{{ link('products') }}" data-pmp-all>عرض جميع المنتجات <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></a></div>
-<div id="pmp-product-list"><salla-products-list source="selected" source-value="[778375203,2017607468,2121906965,580603418]" limit="4"></salla-products-list></div>
-<p id="pmp-catalog-status" role="status" class="sr-only"></p></section>
 <section class="pmp-services" aria-label="خدمة العملاء">
 <a href="#pmp-policy-pages"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 4h13v13H1V4Zm13 5h5l4 5v3h-9"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/></svg><span>سياسة الشحن<small>معلومات الشحن والتوصيل</small></span></a>
 <a href="#pmp-policy-pages"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h10a6 6 0 1 1 0 12M8 4 3 9l5 5"/></svg><span>الاستبدال والاسترجاع<small>اطّلع على سياسات المتجر</small></span></a>

@@ -46,26 +46,15 @@
         result.append(link); link.focus();
       });
     }
-    const host = document.getElementById('pmp-product-list');
-    function showProducts(ids, title) {
-      const list = document.createElement('salla-products-list');
-      list.setAttribute('source', ids ? 'selected' : 'latest');
-      if (ids) list.setAttribute('source-value', JSON.stringify(ids));
-      list.setAttribute('limit', '32'); host.replaceChildren(list);
-      document.getElementById('pmp-product-heading').textContent = title;
-      document.getElementById('pmp-catalog-status').textContent = 'عرض ' + title;
-    }
+    const groupTarget = { clutches: 'pmp-products', ls: 'pmp-gm-ls', intake: 'pmp-products' };
     document.querySelectorAll('[data-pmp-group]').forEach(link => {
       link.addEventListener('click', event => {
-        if (!host || !window.salla) return;
-        let ids; try { ids = JSON.parse(link.dataset.productIds); } catch (_) { return; }
-        if (!Array.isArray(ids) || !ids.length || !ids.every(id => Number.isSafeInteger(id) && id > 0)) return;
-        event.preventDefault(); showProducts(ids, link.dataset.title);
-        document.getElementById('pmp-products').scrollIntoView({ behavior: 'auto', block: 'start' });
+        const target = document.getElementById(groupTarget[link.dataset.pmpGroup] || 'pmp-products');
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'auto', block: 'start' });
       });
     });
-    const all = document.querySelector('[data-pmp-all]');
-    if (all) all.addEventListener('click', event => { if (!host || !window.salla) return; event.preventDefault(); showProducts(null, 'جميع المنتجات'); });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true }); else init();
 })();
