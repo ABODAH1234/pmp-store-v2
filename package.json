@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ABODAH1234/pmp-performance-them.git"
+    "url": "git+https://github.com/ABODAH1234/pmp-store-v2.git"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
