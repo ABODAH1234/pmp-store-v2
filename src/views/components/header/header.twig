@@ -1,7 +1,7 @@
 <header data-testid="store-header" class="store-header pmp-header">
 <div id="mainnav" class="main-nav-container"><div class="inner">
 <div class="pmp-wrap pmp-header-row">
-<a class="navbar-brand" href="{{ store.url }}" aria-label="{{ store.name }}"><img src="{{ store.logo|cdn(350) }}" width="190" height="76" alt="{{ store.name }}" fetchpriority="high">{% if is_page('index') %}<h1 class="sr-only">{{ store.name }}</h1>{% endif %}</a>
+<a class="navbar-brand" href="{{ store.url }}" aria-label="{{ store.name }}"><span class="pmp-logo-mark" role="img" aria-label="{{ store.name }}"></span>{% if is_page('index') %}<h1 class="sr-only">{{ store.name }}</h1>{% endif %}</a>
 <div class="pmp-search"><salla-search data-testid="store-header-search" inline height="44"></salla-search></div>
 <div class="pmp-header-actions"><salla-user-menu avatar-only show-header show-trigger></salla-user-menu><salla-cart-summary><i slot="icon" class="sicon-shopping-bag"></i></salla-cart-summary><a class="lg:hidden" href="#mobile-menu" aria-label="فتح القائمة"><i class="sicon-menu"></i></a></div>
 </div>

@@ -1,6 +1,6 @@
 <footer data-testid="store-footer" class="store-footer pmp-footer">
 <div class="pmp-wrap pmp-footer-grid">
-<div class="pmp-footer-brand"><a href="{{ store.url }}"><img src="{{ store.logo|cdn(350) }}" width="190" height="76" alt="{{ store.name }}" loading="lazy"></a><p>عالم التعديل بين يديك</p><salla-trust-badges dark></salla-trust-badges></div>
+<div class="pmp-footer-brand"><a href="{{ store.url }}"><span class="pmp-logo-mark" role="img" aria-label="{{ store.name }}"></span></a><p>عالم التعديل بين يديك</p><salla-trust-badges dark></salla-trust-badges></div>
 <div id="pmp-policy-pages"><h2>السياسات والروابط</h2><salla-menu source="footer" with-cookie-preferences></salla-menu></div>
 <div><h2>طلبات خاصة</h2><a href="{{ store.url }}#pmp-requests" data-pmp-request="طلب قطع تعديل">طلب قطع تعديل</a><a href="{{ store.url }}#pmp-requests" data-pmp-request="طلب قطع وكالة">طلب قطع وكالة</a><a href="{{ link('products') }}">جميع المنتجات</a></div>
 <div id="pmp-contact"><h2>تواصل معنا</h2><salla-contacts></salla-contacts><salla-social></salla-social>
