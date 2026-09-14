@@ -1,0 +1,46 @@
+{#
+| Variable         | Type       | Description                                                         |
+|------------------|------------|---------------------------------------------------------------------|
+| page             | object     |                                                                     |
+| page.title       | string     | *could be html                                                      |
+| page.slug        | string     | ex: "cat.show"                                                      |
+#}
+{% extends "layouts.master" %}
+{% block content %}
+    <section class="pmp-hero container">
+        <a href="#pmp-products" aria-label="تصفح منتجات PMP">
+            <img src="{{ 'images/pmp-hero-banner.png'|asset }}" alt="PMP Performance - شركات التعديل العالمية" width="2172" height="724" fetchpriority="high">
+        </a>
+    </section>
+
+    <section class="pmp-departments container">
+        <div class="pmp-section-heading"><h2>تسوق حسب القطعة</h2><span>POWER MATCH PERFORMANCE</span></div>
+        <div class="pmp-department-grid">
+            <a class="pmp-department" href="#pmp-products"><span class="pmp-department__number">01</span><h3>كلتشات PMP</h3><p>1FZ · TB48 · RB25 · L24 · L28 · ددسن</p><i class="sicon-arrow-left" aria-hidden="true"></i></a>
+            <a class="pmp-department" href="#pmp-products"><span class="pmp-department__number">02</span><h3>قطع محركات GM LS</h3><p>أصياخ · سبرنق دبل · تكايات · تايمنق</p><i class="sicon-arrow-left" aria-hidden="true"></i></a>
+            <a class="pmp-department" href="#pmp-products"><span class="pmp-department__number">03</span><h3>فلاتر وبواجي</h3><p>K&amp;N · NGK · قطع دعم المشاريع</p><i class="sicon-arrow-left" aria-hidden="true"></i></a>
+        </div>
+    </section>
+
+    <section class="pmp-special-orders container">
+        <div class="pmp-section-heading"><h2>ما لقيت قطعتك؟</h2><span>REQUEST A PART</span></div>
+        <div class="pmp-request-grid">
+            <article class="pmp-request-card"><span class="pmp-request-card__label">SPECIAL ORDER</span><h3>طلب قطع تعديل</h3><p>أرسل رقم القطعة أو مواصفات السيارة، ونرجع لك بالتوفر والسعر.</p><a class="pmp-request-card__cta" href="mailto:{{ store.contacts.email }}?subject=طلب%20قطع%20تعديل">اطلب قطع تعديل <i class="sicon-arrow-left" aria-hidden="true"></i></a></article>
+            <article class="pmp-request-card"><span class="pmp-request-card__label">OEM REQUEST</span><h3>طلب قطع وكالة</h3><p>أرسل رقم الشاص أو رقم القطعة المطلوب للتأكد من المطابقة والتوفر.</p><a class="pmp-request-card__cta" href="mailto:{{ store.contacts.email }}?subject=طلب%20قطع%20وكالة">اطلب قطع وكالة <i class="sicon-arrow-left" aria-hidden="true"></i></a></article>
+        </div>
+    </section>
+
+    <section id="pmp-policies" class="pmp-policies container">
+        <div class="pmp-section-heading"><h2>سياسات PMP</h2><span>STORE POLICIES</span></div>
+        <div class="pmp-policy-grid">
+            <article class="pmp-policy-card"><h3>الشحن والتسليم</h3><p>يتم تأكيد توفر القطعة وموعد الشحن بعد مراجعة الطلب. الشحن من الجبيل إلى السعودية والخليج، وتصل معلومات التتبع عند تجهيز الشحنة.</p></article>
+            <article class="pmp-policy-card"><h3>الاستبدال والاسترجاع</h3><p>لأن قطع الأداء تختلف حسب التطبيق، راجع رقم القطعة ومواصفات سيارتك قبل الطلب. تواصل معنا قبل الإرجاع أو الاستبدال ليتم التحقق من حالة القطعة والطلب.</p></article>
+        </div>
+    </section>
+
+    {% component home %}
+    <section id="pmp-products" class="container pmp-catalog"><div class="pmp-section-heading"><h2>{{ trans('pmp.all_products') }}</h2></div><salla-products-list source="latest" limit="32"></salla-products-list></section>
+{% endblock %}
+{% block scripts %}
+    <script defer src="{{ 'home.js' | asset }}"></script>
+{% endblock %}
