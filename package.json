@@ -1,7 +1,7 @@
 {
   "name": "pmp-performance-theme",
-  "version": "0.1.0",
-  "description": "PMP automotive performance storefront for Salla Twilight",
+  "version": "1.0.0",
+  "description": "Independent PMP Performance automotive storefront theme for Salla Twilight",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -53,5 +53,12 @@
   },
   "engines": {
     "node": "^22.18.0 || >=24.11.0"
-  }
+  },
+  "homepage": "https://pmpperformance.online",
+  "keywords": [
+    "pmp-performance",
+    "salla",
+    "twilight",
+    "automotive-performance"
+  ]
 }
