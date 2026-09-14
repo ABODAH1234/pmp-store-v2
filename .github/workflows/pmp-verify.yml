@@ -1,7 +1,7 @@
 name: Verify PMP theme
 on:
   push:
-    branches: [pmp-red-design-review]
+    branches: [main, pmp-red-design-review]
   pull_request:
     branches: [main]
 permissions:
